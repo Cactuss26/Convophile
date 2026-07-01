@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@media (max-width: 767px) {
+  .mobile-hide {
+    display: none !important;
+  }
+  .mobile-full {
+    width: 100% !important;
+  }
+}
