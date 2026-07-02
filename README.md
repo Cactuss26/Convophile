@@ -83,5 +83,5 @@ NODE_ENV="production"
 ### Frontend (`/frontend/.env`)
 
 ```
-BACKEND_URL="render-url"
+VITE_BACKEND_URL="render-url"
 ```
