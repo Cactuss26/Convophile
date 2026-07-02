@@ -132,6 +132,19 @@ export const Register = () => {
                         </button>
                     </div>
                 </form>
+
+                <div className="mt-6 text-center">
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Already have an account?{' '}
+                        <button 
+                            type="button"
+                            onClick={() => navigate('/login')} 
+                            className="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
+                        >
+                            Sign in
+                        </button>
+                    </p>
+                </div>
             </div>
         </div>
     )
