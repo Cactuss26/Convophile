@@ -43,8 +43,8 @@ export const userSignup = async (req, res, next) => {
         res.cookie("authorization", token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: 'strict',
-            maxAge: 1000 * 60 * 15   // 15 min for now
+            sameSite: 'none',
+            maxAge: 1000 * 60 * 60 * 24   
         });
 
         res.json({ userId: user.id, name: user.name, email: user.email });
@@ -83,8 +83,8 @@ export const userLogin = async (req, res, next) => {
         res.cookie("authorization", token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: 'strict',
-            maxAge: 1000 * 60 * 15   // 15 min for now
+            sameSite: 'none',
+            maxAge: 1000 * 60 * 60 * 24  
         });
 
         res.json({ userId: user.id, name: user.name, email: user.email });
