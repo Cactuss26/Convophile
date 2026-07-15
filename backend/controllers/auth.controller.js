@@ -118,5 +118,9 @@ export const validateUser = async (req, res, next) => {
 }
 
 export const logoutUser = async (req, res, next) => {
-    return res.clearCookie("authorization").send("Logged out successfully");
+    return res.clearCookie("authorization", {
+        httpOnly: true,
+        secure: true,
+        sameSite: "none"
+    }).send("Logged out successfully");
 }
